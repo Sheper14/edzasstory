@@ -1,0 +1,12 @@
+import random
+import string
+
+def generate_random_code(length=10):
+    """Generate a random alphanumeric code."""
+    characters = string.ascii_letters + string.digits
+    code = ''.join(random.choice(characters) for _ in range(length))
+    return code
+
+if __name__ == "__main__":
+    random_code = generate_random_code()
+    print(f"Generated code: {random_code}")
